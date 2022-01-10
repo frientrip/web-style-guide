@@ -222,7 +222,7 @@ function useQueryProductDetail(): ProductDetailResponse {
 - 자식 컴포넌트가 없다면 항상 닫힘 태그를 사용합니다.
 
 **Good** 👍
-```react
+```javascript
 <Button />
 <PaginationGroup />
 
@@ -232,7 +232,7 @@ function useQueryProductDetail(): ProductDetailResponse {
 ```
 
 **Bad** 👎
-```react
+```javascript
 <Product_Detail />
 <SERVICE_QNA />
 ```
@@ -242,7 +242,7 @@ function useQueryProductDetail(): ProductDetailResponse {
 - prop의 값이 불변의 true라면 생략합니다.
 
 **Good** 👍
-```react
+```javascript
 <ProductDetail
   productId={12345678}
   productTitle="good"
@@ -251,7 +251,7 @@ function useQueryProductDetail(): ProductDetailResponse {
 ```
 
 **Bad** 👎
-```react
+```javascript
 <ProductDetail
   product_id={12345678}
   ProductTitle="bad"
@@ -263,7 +263,7 @@ function useQueryProductDetail(): ProductDetailResponse {
 - key 속성 값을 배열의 인덱스로 사용하지 않고 **유니크한 ID** 값을 사용합니다.
 
 **Good** 👍
-```react
+```javascript
 {productLists.map((product) =>
   <Product
     key={product.id}
@@ -273,7 +273,7 @@ function useQueryProductDetail(): ProductDetailResponse {
 ```
 
 **Bad** 👎
-```react
+```javascript
 {productLists.map((product, index) =>
   <Product
     key={index}
@@ -286,7 +286,7 @@ function useQueryProductDetail(): ProductDetailResponse {
 - 컴포넌트를 복수로 렌더링 할 때는 **화살표 함수**를 사용합니다.
 
 **Good** 👍
-```react
+```javascript
 {productLists.map((product) =>
   <Product
     key={product.id}
@@ -296,7 +296,7 @@ function useQueryProductDetail(): ProductDetailResponse {
 ```
 
 **Bad** 👎
-```react
+```javascript
 {productLists.map(function (product) {
    return <product key={product.id} {...product} />
 })}
@@ -310,7 +310,7 @@ function useQueryProductDetail(): ProductDetailResponse {
   - 이미 스크린리더는 위와 같은 단어를 이미지로 인지하고 있기 때문입니다.
 
 **Good** 👍
-```react
+```javascript
 <img src="hello.jpg" alt="Me waving hello" />
 
 <img src="hello.jpg" alt="" />
@@ -319,7 +319,7 @@ function useQueryProductDetail(): ProductDetailResponse {
 ```
 
 **Bad** 👎
-```react
+```javascript
 <img src="hello.jpg" />
 
 <img src="hello.jpg" alt="Picture of me waving hello" />
