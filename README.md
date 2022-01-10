@@ -12,13 +12,13 @@
 - 디렉토리 내에 여러개의 파일들이 들어있다면 **s**를 추가로 붙여 명명합니다.
 
 **Good** 👍
-```javascript
+```
 - Accordion, ProductDetailPage, Product
 - utils, useQueryProductList
 ```
 
 **Bad** 👎
-```javascript
+```
 - accordion, UseQueryReviews
 ```
 
@@ -30,18 +30,20 @@
 - 컴포넌트의 경우 파일명과 **동일**하게 명명합니다.
 
 **Good** 👍
-```javascript
+```
 - Button.tsx, models/ProductDetailViewModel.ts, PurchasePage/index.tsx
 - types, functions
-
+```
+```javascript 
 import Button from './Components/Button'
 ```
 
 **Bad** 👎
-```javascript
+```
 - button.tsx, models/productDetailViewModel.ts, PurchasePage/PurchasePage.tsx
 - type, function
-
+```
+```javascript
 import Button from './Components/Button/index.tsx'
 ```
 
